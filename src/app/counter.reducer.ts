@@ -1,15 +1,13 @@
 import { createReducer, on } from '@ngrx/store';
 import { increment, decrement, reset } from './counter.actions';
 
-export interface CounterState {
-  value: number;
-}
+import { AppState } from './app.state';
 
 export const initialState = {
   value: 0
 }
 
-const newState = (state: CounterState, newData: CounterState) => {
+const newState = (state: AppState, newData: AppState) => {
   return Object.assign({}, state, newData);
 }
 
